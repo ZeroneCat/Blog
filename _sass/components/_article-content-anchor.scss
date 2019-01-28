@@ -1,0 +1,18 @@
+.article__content {
+  @include heading-elements() {
+    	@media all and (min-width: 800px) {
+        .anchor-ht{
+            font-size: map-get($base, font-size);
+            position: absolute;
+            left: -2.2rem;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+            visibility: visible;
+        }
+	}
+  }
+  h1 {
+  @include split-line(bottom);
+  //text-align: center;
+  }
+}
