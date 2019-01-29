@@ -14,6 +14,9 @@
       .weibo-button {
         @include clickable($text-color-1, $weibo-color);
       }
+      .ello-button {
+        @include clickable($text-color-1, $ello-color);
+      }
       .googlepluse-button {
         @include clickable($text-color-1, $google-plus-color);
       }
