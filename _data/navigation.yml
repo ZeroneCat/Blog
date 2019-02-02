@@ -1,4 +1,9 @@
 header:
+
+  - titles:
+      en      : Home
+      zh      : 主页
+    url: /blog
   - titles:
       en      : &EN       Archive
       en-GB   : *EN
@@ -14,7 +19,7 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       아카이브
       ko-KR   : *KO
-    url: /archive.html
+    url: /blog/archive
 
   - titles:
       en      : &EN       About
@@ -31,4 +36,4 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
-    url: /about.html
+    url: /blog/about.html
