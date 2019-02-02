@@ -141,8 +141,13 @@ comments:
     app_id      : lhVBTOWmRLcvORsXLxTXNPHd-gzGzoHsz # LeanCloud App id
     app_key     : ImJezWrDsMQJvz2kI7TASrw2 # LeanCloud App key
     placeholder : # Prompt information
+<<<<<<< HEAD
     visitor     : true # false (default)
     meta        : "['nick', 'mail']" # "['nick', 'mail', 'link']" (default) nickname, E-mail, Personal-site
+=======
+    visitor     : # false (default)
+    meta        : # "['nick', 'mail', 'link']" (default) nickname, E-mail, Personal-site
+>>>>>>> a4a620d1... feat: valine vistor&config
 
 
 ## => Pageview
