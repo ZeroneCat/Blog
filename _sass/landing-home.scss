@@ -1,0 +1,58 @@
+.landing-home {
+  display: table;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  background:
+      linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.8)),
+      url(https://ww1.sinaimg.cn/large/6380a6e5gy1fq7t06rwwvj213d0tiqjn.jpg)
+      #333 no-repeat fixed 50% 50%;
+  background-position: center;
+  background-size: cover;
+
+  .main {
+      display: table-cell;
+      box-sizing: border-box;
+      text-align: center;
+      vertical-align: middle;
+      animation: fade-in-down .8s;
+      h1, body, p {
+          margin: 0;
+          color: $text-color-theme-dark-d;
+          font-family: "Yanone Kaffeesatz", sans-serif
+      }
+  }
+
+  .content {
+      display: table;
+      padding: .8rem 0 .8rem / 4 0;
+      margin:  auto;
+  }
+  h1,body {font-family: "Yanone Kaffeesatz", map-get($base, font-family)}
+  .my-photo {
+      display: inline-block;
+      &:hover {
+          transform: rotate(360deg);
+      }
+      img {
+          display: block;
+          box-sizing: border-box;
+          height: 9rem;
+          width: 9rem;
+          border-radius: 5rem;
+          border-style: solid;
+          border-width: 5px;
+          border-color: rgba(255, 255, 255, 0.5);
+      }
+      @include transition(transform 0.8s ease 0s);
+  }
+  .home-hr{border-color:#9e9e9e!important;}
+  .button--theme-light {
+    //@include clickable($text-color-theme-dark, $main-color-theme-light);
+    //color: #9e9e9e;
+    border: 1px solid $main-color-theme-dark
+  }
+}
