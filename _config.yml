@@ -16,33 +16,33 @@
 
 ## => Site Settings
 ##############################
-text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+text_skin: customized # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : ZeroneCat
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  Cat says Meow
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
-timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+lang: "zh" # the language of your site, default as "en"
+timezone: Asia/Singapore # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
-  url       :
+  name      : Zerone
+  url       : https://zeronecat.me
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
-  email     :
+  email     : ZeroneCat@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
-  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
+  weibo     : yangly930 # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
@@ -51,20 +51,21 @@ author:
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+  ello      : mistyly
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: ZeroneCat/Blog
 repository_tree: master
 
 
 ## => Paths
 ##############################
 paths:
-  root    : # title link url, "/" (default)
-  home    : # home layout url, "/" (default)
-  archive : # "/archive.html" (default)
+  root    : / # title link url, "/" (default)
+  home    : /blog # home layout url, "/" (default)
+  archive : /blog/archive.html # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
 
 
@@ -97,7 +98,7 @@ chart: # false (default), true
 ## => Paginate
 ##############################
 paginate: 8
-paginate_path: /page:num # don't change this unless for special need
+paginate_path: /blog/page:num # don't change this unless for special need
 
 
 ## => Sources
@@ -118,7 +119,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: "valine" # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -137,11 +138,11 @@ comments:
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
   valine:
-    app_id      : # LeanCloud App id
-    app_key     : # LeanCloud App key
+    app_id      : lhVBTOWmRLcvORsXLxTXNPHd-gzGzoHsz # LeanCloud App id
+    app_key     : ImJezWrDsMQJvz2kI7TASrw2 # LeanCloud App key
     placeholder : # Prompt information
-    visitor     : # false (default)
-    meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
+    visitor     : true # false (default)
+    meta        : "[nick, mail]" # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
 
 
 ## => Pageview
@@ -169,11 +170,11 @@ search:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: "google" # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id : # Google Analytics id for the site
+    tracking_id : UA-119107002-1 # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
@@ -181,7 +182,7 @@ analytics:
 ##############################
 markdown    : kramdown
 highlighter : rouge
-permalink   : date
+permalink   : none
 
 exclude:
   - CHANGELOG.md
@@ -203,17 +204,17 @@ exclude:
 
 defaults:
   - scope:
-      path: ""
-      type: posts
+      path: "_posts"
     values:
       layout: article
-      sharing: true
+      permalink: "/blog/:title"
+      sharing: false
       license: true
       aside:
         toc: true
-      show_edit_on_github: true
-      show_subscribe: true
-      pageview: true
+      show_edit_on_github: false
+      show_subscribe: false
+      pageview: false
 
 
 ## => Plugins
